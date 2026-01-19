@@ -2046,31 +2046,32 @@ ItemDisplay[UNI !ID cm3]:  %NL%          %%RED% %%% %GOLD%%NAME% %RED% %%%%     
 //  					HEAD/Helms EQ1
 // -------------------------------------------------------------------------------------------------------------
 
-EnableIf[EQ1 NMAG]
+EnableIf[(EQ1 OR EQ7) NMAG]
 
 // ---------------------------------------------------- GRAY ----------------------------------------------------	
-    ItemDisplay[FILTERLVL<2 DEF<50 !ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %LIGHT_GRAY% %NAME% %CONTINUE%
-	ItemDisplay[FILTERLVL<2 DEF<75 ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %LIGHT_GRAY% %NAME% %CONTINUE%
-	ItemDisplay[FILTERLVL>1 DEF<50 !ETH]: %HIDE%
-	ItemDisplay[FILTERLVL>1 DEF<75 ETH]: %HIDE%
+    ItemDisplay[FILTERLVL<3 DEF<50 !ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %LIGHT_GRAY% %NAME% %CONTINUE%
+	ItemDisplay[FILTERLVL<3 DEF<75 ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %LIGHT_GRAY% %NAME% %CONTINUE%
+	ItemDisplay[FILTERLVL>2 DEF<50 !ETH]: %HIDE%			// HIDE Non-ETH with FilterLevel-3
+	ItemDisplay[FILTERLVL>2 DEF<75 ETH]: %HIDE%				// HIDE ETH with FilterLevel-3
+    ItemDisplay[FILTERLVL>1 DEF<50 SOCK<2]: %HIDE%			// HIDE Helms with no SOCKETS below 50-Defense with FilterLevel-2
 // ---------------------------------------------------- WHITE ----------------------------------------------------	
     ItemDisplay[FILTERLVL<4 (DEF>49 AND DEF<100) !ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %WHITE%%NAME% %CONTINUE%
-    ItemDisplay[FILTERLVL<4 (DEF>74 AND DEF<150) ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH:  %WHITE%%NAME% %CONTINUE%
-    ItemDisplay[FILTERLVL>3 (DEF>49 AND DEF<100) !ETH]: %HIDE%
-	ItemDisplay[FILTERLVL>3 (DEF>74 AND DEF<150) ETH]: %HIDE%
+ 	ItemDisplay[FILTERLVL<4 (DEF>74 AND DEF<150) ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH:  %WHITE%%NAME% %CONTINUE%
+    ItemDisplay[FILTERLVL>3 DEF<100 !ETH]: %HIDE%			// HIDE Non-ETH with FilterLevel-4 
+    ItemDisplay[FILTERLVL>3 DEF<150 ETH]: %HIDE%			// HIDE ETH with FilterLevel-4
+	ItemDisplay[FILTERLVL>2 DEF<100 SOCK<2]: %HIDE%			// HIDE Helms with no SOCKETS below 100-Defense with FilterLevel-3
 // ---------------------------------------------------- ORANGE ----------------------------------------------------	
-    ItemDisplay[FILTERLVL<6 (DEF>99 AND DEF<150) !ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %ORANGE%%NAME% %CONTINUE%
-	ItemDisplay[FILTERLVL<6 (DEF>149 AND DEF<225) ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %ORANGE%%NAME% %CONTINUE%
-    ItemDisplay[FILTERLVL>5 (DEF>99 AND DEF<150) !ETH]: %HIDE%
-	ItemDisplay[FILTERLVL>5 (DEF>149 AND DEF<225) ETH]: %HIDE%
+    ItemDisplay[FILTERLVL<5 (DEF>99 AND DEF<150) !ETH]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %ORANGE%%NAME% %CONTINUE%
+    ItemDisplay[FILTERLVL<5 (DEF>149 AND DEF<225) ETH]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %ORANGE%%NAME% %CONTINUE%
+	ItemDisplay[FILTERLVL>4 DEF<150 !ETH]: %HIDE%			// HIDE Non-ETH with FilterLevel-5
+	ItemDisplay[FILTERLVL>4 DEF<225 ETH]: %HIDE%			// HIDE ETH with FilterLevel-5
+    ItemDisplay[FILTERLVL>3 DEF<150 SOCK<2]: %HIDE%			// HIDE Helms with no SOCKETS below 150-Defense with FilterLevel-4
 // ---------------------------------------------------- PURPLE ----------------------------------------------------		
-	ItemDisplay[FILTERLVL<7 DEF>149 !ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %PURPLE%%NAME% %CONTINUE%
-    ItemDisplay[FILTERLVL<7 DEF>224 ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %PURPLE%%NAME% %CONTINUE%
-    ItemDisplay[FILTERLVL>6 DEF>224 ETH]: %HIDE%
- 	ItemDisplay[FILTERLVL>6 DEF>149 !ETH]: %HIDE%
-	
-    ItemDisplay[ED>0]: %NAME% %YELLOW%%EDEFENSE%ed%CONTINUE%
-	
+	ItemDisplay[FILTERLVL<8 DEF>149 !ETH]: %NOTIFY(ITEM,HIGH)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %PURPLE%%NAME% %CONTINUE%
+    ItemDisplay[FILTERLVL<8 DEF>224 ETH]: %NOTIFY(ITEM,HIGH)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %PURPLE%%NAME% %CONTINUE%
+	ItemDisplay[FILTERLVL>5 DEF<225 SOCK<2]: %HIDE%			// HIDE Helms with no SOCKETS below 50-Defense with FilterLevel-6
+															// With no more filters, KEEP helms with 3 or 4 SOCKETS above 225 Defense
+	ItemDisplay[ED>0]: %NAME% %YELLOW%%EDEFENSE%ed%CONTINUE%
 	ItemDisplay[SOCK=0 SUP]: %NAME% %ORANGE%[%DEF%]{%YELLOW%MAX-Socket %ORANGE%Larzuk Quest}
 	ItemDisplay[SOCK=0 !SUP]: %NAME% %ORANGE%[%DEF%]{%YELLOW%Roll Socket: %ORANGE%Ral-Thul-%BLUE%Sapphire%NL%%YELLOW%MAX-Socket: %ORANGE%Larzuk Quest}
 	ItemDisplay[SOCK=1]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]
