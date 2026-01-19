@@ -2048,28 +2048,31 @@ ItemDisplay[UNI !ID cm3]:  %NL%          %%RED% %%% %GOLD%%NAME% %RED% %%%%     
 
 EnableIf[EQ1 NMAG]
 
-    ItemDisplay[FILTERLVL>7]:
-	
-    ItemDisplay[FILTERLVL<2 DEF<50 ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %LIGHT_GRAY% %NAME% %CONTINUE%
+// ---------------------------------------------------- GRAY ----------------------------------------------------	
     ItemDisplay[FILTERLVL<2 DEF<50 !ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %LIGHT_GRAY% %NAME% %CONTINUE%
-	ItemDisplay[FILTERLVL>2 DEF<50]: %HIDE%
-	
-    ItemDisplay[FILTERLVL<3 (DEF>49 AND DEF<100) ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %WHITE%%NAME% %CONTINUE%
-    ItemDisplay[FILTERLVL<3 (DEF>49 AND DEF<100) !ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY% %WHITE%%NAME% %CONTINUE%
-    ItemDisplay[FILTERLVL>2 (DEF>49 AND DEF<100)]: %HIDE%
-	
-	ItemDisplay[FILTERLVL<5 (DEF>99 AND DEF<149) ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %ORANGE%%NAME% %CONTINUE%
-    ItemDisplay[FILTERLVL<5 (DEF>99 AND DEF<149) !ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY% %ORANGE%%NAME% %CONTINUE%
-	ItemDisplay[FILTERLVL>4 (DEF>99 AND DEF<149)]: %HIDE%
-	
-	ItemDisplay[FILTERLVL<7 DEF>149 ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %PURPLE%%NAME% %CONTINUE%
-    ItemDisplay[FILTERLVL<7 DEF>149 !ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY% %PURPLE%%NAME% %CONTINUE%
- 	ItemDisplay[FILTERLVL>6 DEF>149]: %HIDE%
+	ItemDisplay[FILTERLVL<2 DEF<75 ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %LIGHT_GRAY% %NAME% %CONTINUE%
+	ItemDisplay[FILTERLVL>1 DEF<50 !ETH]: %HIDE%
+	ItemDisplay[FILTERLVL>1 DEF<75 ETH]: %HIDE%
+// ---------------------------------------------------- WHITE ----------------------------------------------------	
+    ItemDisplay[FILTERLVL<3 (DEF>49 AND DEF<100) !ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %WHITE%%NAME% %CONTINUE%
+    ItemDisplay[FILTERLVL<3 (DEF>74 AND DEF<150) ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY% %WHITE%%NAME% %CONTINUE%
+    ItemDisplay[FILTERLVL>2 (DEF>49 AND DEF<100) !ETH]: %HIDE%
+	ItemDisplay[FILTERLVL>2 (DEF>74 AND DEF<150) ETH]: %HIDE%
+// ---------------------------------------------------- ORANGE ----------------------------------------------------	
+    ItemDisplay[FILTERLVL<5 (DEF>99 AND DEF<150) !ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY% %ORANGE%%NAME% %CONTINUE%
+	ItemDisplay[FILTERLVL<5 (DEF>149 AND DEF<225) ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %ORANGE%%NAME% %CONTINUE%
+    ItemDisplay[FILTERLVL>4 (DEF>99 AND DEF<150) !ETH]: %HIDE%
+	ItemDisplay[FILTERLVL>4 (DEF>149 AND DEF<225) ETH]: %HIDE%
+// ---------------------------------------------------- PURPLE ----------------------------------------------------		
+    ItemDisplay[FILTERLVL<7 DEF>224 ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY% %PURPLE%%NAME% %CONTINUE%
+	ItemDisplay[FILTERLVL<7 DEF>149 !ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(86)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %PURPLE%%NAME% %CONTINUE%
+	ItemDisplay[FILTERLVL>6 DEF>224 ETH]: %HIDE%
+ 	ItemDisplay[FILTERLVL>6 DEF>149 !ETH]: %HIDE%
 	
     ItemDisplay[ED>0]: %NAME% %YELLOW%%EDEFENSE%ed%CONTINUE%
 	
-	ItemDisplay[SOCK=0 SUP]: %NAME% %ORANGE%[%DEF%]
-	ItemDisplay[SOCK=0 !SUP]: %NAME% %ORANGE%[%DEF%]{%YELLOW%Roll Socket: %ORANGE%Ral-Thul-%BLUE%Sapphire}
+	ItemDisplay[SOCK=0 SUP]: %NAME% %ORANGE%[%DEF%]{%YELLOW%MAX-Socket %ORANGE%Larzuk Quest}
+	ItemDisplay[SOCK=0 !SUP]: %NAME% %ORANGE%[%DEF%]{%YELLOW%Roll Socket: %ORANGE%Ral-Thul-%BLUE%Sapphire%NL%%YELLOW%MAX-Socket: %ORANGE%Larzuk Quest}
 	ItemDisplay[SOCK=1]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]
 	ItemDisplay[SOCK=2]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%[27]Lore:%ORANGE% Ort-Sol%NL%%YELLOW%[13]Nadir: %ORANGE%Nef-Tir}
     ItemDisplay[SOCK=3]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%[55]Flickering Flame:%ORANGE% Nef-Pul-Vex%NL%%YELLOW%[67]Metamorphosis:%ORANGE% Io-Cham-Fal%NL%%YELLOW%[51]Delirium:%ORANGE% Lem-Ist-Io%NL%%YELLOW%[65]Dream:%ORANGE% Io-Jah-Pul %NL%%PURPLE% * * * END GAME Runewords * * * %NL%%YELLOW%[45]Wisdom:%ORANGE% Pul-Ith-Eld %NL%%YELLOW%[35]Bulwark:%ORANGE% Shael-Io-Sol %NL%%YELLOW%[35]Ground:%ORANGE% Shael-Io-Ort %NL%%YELLOW%[35]Hearth:%ORANGE% Shael-Io-Thul %NL%%YELLOW%[35]Temper:%ORANGE% Shael-Io-Ral %NL%%YELLOW%[35]Cure:%ORANGE% Shael-Io-Tal %NL%%YELLOW%[27]Radiance:%ORANGE% Nef-Sol-Ith}
@@ -2081,116 +2084,43 @@ EndIf[]
 
 EnableIf[EQ2 NMAG]
 
-// -------------------------------------------------------------------------------------------------------------
-//  600+ Armors			PURPLE	Filter Level-6	No Armor with less than 3 socketsTypes with StrengthREQ over 200
-// -------------------------------------------------------------------------------------------------------------
-  EnableIf[DEF>599]
-      ItemDisplay[FILTERLVL>5 SOCK<3 (ult OR uth OR uul OR uar)]:
-      ItemDisplay[ETH]: %NOTIFY(ITEM,HIGH)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)%%SPACE% %GRAY%ETH: %PURPLE%%NAME% %CONTINUE%
-      ItemDisplay[!ETH]: %NOTIFY(ITEM,HIGH)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)%%SPACE% %PURPLE% %NAME% %CONTINUE%
-      ItemDisplay[ED>0]: %NAME% %YELLOW%%EDEFENSE%ed%CONTINUE%
-      ItemDisplay[SOCK=0 SUP]: %NAME% %ORANGE%[%DEF%]{%GREEN%Max-Socket: %ORANGE%Larzuk Quest}
-      ItemDisplay[SOCK=0 !SUP]: %NAME% %ORANGE%[%DEF%]{%GRAY%RollSocket: %ORANGE%Tal-Thul-%YELLOW%Topaz%NL%%GREEN%Max-Socket: %ORANGE%Larzuk Quest}
-      ItemDisplay[SOCK=1]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]
-      ItemDisplay[SOCK=2]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Smoke: %ORANGE%Nef-Lum %NL%%YELLOW%Stealth: %ORANGE%Tal-Eth %NL%%YELLOW%Prudence: %ORANGE%Mal-Tir}
-      ItemDisplay[SOCK=3]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Treachery: %ORANGE%Shael-Thul-Lem%NL%%YELLOW%Duress: %ORANGE%Shael-Um-Thul %NL%%YELLOW%Gloom: %ORANGE%Fal-Um-Pul %NL%%YELLOW%Bone: %ORANGE%Sol-Um-Um %NL%%YELLOW%Enigma: %ORANGE%Jah-Ith-Ber}
-      ItemDisplay[SOCK=4]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Chains of Honor: %ORANGE%Dol-Um-Ber-Ist%NL%%YELLOW%Fortitude: %ORANGE%El-Sol-Dol-Lo%NL%%YELLOW%Bramble: %ORANGE%Ral-Ohm-Sur-Eth%NL%%YELLOW%Famine: %ORANGE%Fal-Ohm-Ort-Jah%NL%%YELLOW%Stone: %ORANGE%Shael-Um-Pul-Lum}
-
-  EndIf[]
-
-// -------------------------------------------------------------------------------------------------------------
-//  500-600 Armors	RED	Filter Level-4	No Armor Types with StrengthREQ over 200
-//				Filter Level-6  No Armors with less than 3 sockets below Filter-Level-3	
-// -------------------------------------------------------------------------------------------------------------
-
-  EnableIf[(DEF>499 AND DEF<600)]
-      ItemDisplay[FILTERLVL>5 SOCK<3]:
-      ItemDisplay[FILTERLVL>4 SOCK<3 (ult OR uth OR uul OR uar)]:
-      ItemDisplay[ETH]: %NOTIFY(ITEM,HIGH)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)%%SPACE% %GRAY%ETH:%RED%%NAME% %CONTINUE%
-      ItemDisplay[!ETH]: %NOTIFY(ITEM,HIGH)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)%%SPACE% %RED%%NAME% %CONTINUE%
-      ItemDisplay[ED>0]: %NAME% %YELLOW%%EDEFENSE%ed%CONTINUE%
-      ItemDisplay[SOCK=0 SUP]: %NAME% %ORANGE%[%DEF%]{%GREEN%Max-Socket: %ORANGE%Larzuk Quest}
-      ItemDisplay[SOCK=0 !SUP]: %NAME% %ORANGE%[%DEF%]{%GRAY%RollSocket: %ORANGE%Tal-Thul-%YELLOW%Topaz%NL%%GREEN%Max-Socket: %ORANGE%Larzuk Quest}
-      ItemDisplay[SOCK=1]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]
-      ItemDisplay[SOCK=2]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Smoke: %ORANGE%Nef-Lum %NL%%YELLOW%Stealth: %ORANGE%Tal-Eth %NL%%YELLOW%Prudence: %ORANGE%Mal-Tir}
-      ItemDisplay[SOCK=3]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Treachery: %ORANGE%Shael-Thul-Lem%NL%%YELLOW%Duress: %ORANGE%Shael-Um-Thul %NL%%YELLOW%Gloom: %ORANGE%Fal-Um-Pul %NL%%YELLOW%Bone: %ORANGE%Sol-Um-Um %NL%%YELLOW%Enigma: %ORANGE%Jah-Ith-Ber}
-      ItemDisplay[SOCK=4]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Chains of Honor: %ORANGE%Dol-Um-Ber-Ist%NL%%YELLOW%Fortitude: %ORANGE%El-Sol-Dol-Lo%NL%%YELLOW%Bramble: %ORANGE%Ral-Ohm-Sur-Eth%NL%%YELLOW%Famine: %ORANGE%Fal-Ohm-Ort-Jah%NL%%YELLOW%Stone: %ORANGE%Shael-Um-Pul-Lum}
-
-  EndIf[]
-
-// -------------------------------------------------------------------------------------------------------------
-//  400-500 Armors	ORANGE	Filter Level-3	No Armors with less than 3 sockets below Filter-Level-3
-//				Filter Level-6  No Armors with Filter-Level-6	
-// -------------------------------------------------------------------------------------------------------------
-
-  EnableIf[(DEF>399 AND DEF<500)]
-      ItemDisplay[FILTERLVL>3 SOCK<3]:
-      ItemDisplay[FILTERLVL>4]:
-      ItemDisplay[ETH]: %NOTIFY(ITEM,HIGH)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)%%SPACE% %GRAY%ETH:%ORANGE%%NAME% %CONTINUE%
-      ItemDisplay[!ETH]: %NOTIFY(ITEM,HIGH)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)%%SPACE% %ORANGE%%NAME% %CONTINUE%
-      ItemDisplay[ED>0]: %NAME% %YELLOW%%EDEFENSE%ed%CONTINUE%
-      ItemDisplay[SOCK=0 SUP]: %NAME% %ORANGE%[%DEF%]{%GREEN%Max-Socket: %ORANGE%Larzuk Quest}
-      ItemDisplay[SOCK=0 !SUP]: %NAME% %ORANGE%[%DEF%]{%GRAY%RollSocket: %ORANGE%Tal-Thul-%YELLOW%Topaz%NL%%GREEN%Max-Socket: %ORANGE%Larzuk Quest}
-      ItemDisplay[SOCK=1]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]
-      ItemDisplay[SOCK=2]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Smoke: %ORANGE%Nef-Lum %NL%%YELLOW%Stealth: %ORANGE%Tal-Eth %NL%%YELLOW%Prudence: %ORANGE%Mal-Tir}
-      ItemDisplay[SOCK=3]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Treachery: %ORANGE%Shael-Thul-Lem%NL%%YELLOW%Duress: %ORANGE%Shael-Um-Thul %NL%%YELLOW%Gloom: %ORANGE%Fal-Um-Pul %NL%%YELLOW%Bone: %ORANGE%Sol-Um-Um %NL%%YELLOW%Enigma: %ORANGE%Jah-Ith-Ber}
-      ItemDisplay[SOCK=4]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Chains of Honor: %ORANGE%Dol-Um-Ber-Ist%NL%%YELLOW%Fortitude: %ORANGE%El-Sol-Dol-Lo%NL%%YELLOW%Bramble: %ORANGE%Ral-Ohm-Sur-Eth%NL%%YELLOW%Famine: %ORANGE%Fal-Ohm-Ort-Jah%NL%%YELLOW%Stone: %ORANGE%Shael-Um-Pul-Lum}
-
-  EndIf[]
-
-// -------------------------------------------------------------------------------------------------------------
-//  300-400 Armors	BLUE	  Filter Level-3	No Armors with Filter-Level-4
-// -------------------------------------------------------------------------------------------------------------
-
-  EnableIf[(DEF>299 AND DEF<400)]
-      ItemDisplay[FILTERLVL>3]:
-      ItemDisplay[ETH]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)% %SPACE% %GRAY%ETH: %BLUE%%NAME% %CONTINUE%
-      ItemDisplay[!ETH]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)% %SPACE% %BLUE%%NAME% %CONTINUE%
-      ItemDisplay[ED>0]: %NAME% %YELLOW%%EDEFENSE%ed%CONTINUE%
-      ItemDisplay[SOCK=0 SUP]:  %NAME% %ORANGE%[%DEF%]
-      ItemDisplay[SOCK=0 !SUP]: %NAME% %ORANGE%[%DEF%]{%GRAY%RollSocket: %ORANGE%Tal-Thul-%YELLOW%Topaz}
-      ItemDisplay[SOCK=1]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]
-      ItemDisplay[SOCK=2]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Smoke: %ORANGE%Nef-Lum %NL%%YELLOW%Stealth: %ORANGE%Tal-Eth %NL%%YELLOW%Prudence: %ORANGE%Mal-Tir}
-      ItemDisplay[SOCK=3]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Treachery: %ORANGE%Shael-Thul-Lem%NL%%YELLOW%Gloom: %ORANGE%Fal-Um-Pul %NL%%YELLOW%Bone: %ORANGE%Sol-Um-Um}
-      ItemDisplay[SOCK=4]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Stone: %ORANGE%Shael-Um-Pul-Lum}
-
-  EndIf[]
-
-// -------------------------------------------------------------------------------------------------------------
-//  200-300 Armors	WHITE	  Filter Level-2	No Armors with Filter-Level-3
-// -------------------------------------------------------------------------------------------------------------
-
-   EnableIf[(DEF>199 AND DEF<300)]
-      ItemDisplay[FILTERLVL>2]:
-      ItemDisplay[ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)%%SPACE% %GRAY%ETH: %WHITE%%NAME% %CONTINUE%
-      ItemDisplay[!ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)%%SPACE% %WHITE%%NAME% %CONTINUE%
-      ItemDisplay[ED>0]: %NAME% %YELLOW%%EDEFENSE%ed%CONTINUE%
-      ItemDisplay[SOCK=0 SUP]: %NAME% %ORANGE%[%DEF%]
-      ItemDisplay[SOCK=0 !SUP]: %NAME% %ORANGE%[%DEF%]{%GRAY%RollSocket: %ORANGE%Tal-Thul-%YELLOW%Topaz}
-      ItemDisplay[SOCK=1]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]
-      ItemDisplay[SOCK=2]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Smoke: %ORANGE%Nef-Lum %NL%%YELLOW%Stealth: %ORANGE%Tal-Eth %NL%%YELLOW%Prudence: %ORANGE%Mal-Tir}
-      ItemDisplay[SOCK=3]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Treachery: %ORANGE%Shael-Thul-Lem%NL%%YELLOW%Gloom: %ORANGE%Fal-Um-Pul %NL%%YELLOW%Bone: %ORANGE%Sol-Um-Um}
-      ItemDisplay[SOCK=4]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW% Too Low Item for a 4-Runeword}
-
-   EndIf[]
-   
-// -------------------------------------------------------------------------------------------------------------
-//  BELOW 200 Armors	GRAY	  Filter Level-1	No Armors with Filter-Level-2	
-// -------------------------------------------------------------------------------------------------------------
-
-   EnableIf[DEF<200]
-      ItemDisplay[FILTERLVL>1]:
-      ItemDisplay[ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)%%SPACE% %GRAY%ETH: %NAME% %CONTINUE%
-      ItemDisplay[!ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)%%SPACE% %GRAY%%NAME% %CONTINUE%
-      ItemDisplay[ED>0]: %NAME% %YELLOW%%EDEFENSE%ed%CONTINUE%
-      ItemDisplay[SOCK=0 SUP]: %NAME% %ORANGE%[%DEF%]
-      ItemDisplay[SOCK=0 !SUP]: %NAME% %ORANGE%[%DEF%]{%GRAY%RollSocket: %ORANGE%Tal-Thul-%YELLOW%Topaz}
-      ItemDisplay[SOCK=1]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]
-      ItemDisplay[SOCK=2]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Smoke: %ORANGE%Nef-Lum %NL%%YELLOW%Stealth: %ORANGE%Tal-Eth %NL%%YELLOW%Prudence: %ORANGE%Mal-Tir}
-      ItemDisplay[SOCK=3]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Treachery: %ORANGE%Shael-Thul-Lem%NL%%YELLOW%Gloom: %ORANGE%Fal-Um-Pul %NL%%YELLOW%Bone: %ORANGE%Sol-Um-Um}
-      ItemDisplay[SOCK=4]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW% Too Low Item for a 4-Runeword}
-
-   EndIf[]
+// ---------------------------------------------------- GRAY -----------------------------------------------------------------------------------------------	
+    ItemDisplay[FILTERLVL<2 DEF<200 !ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)% %LIGHT_GRAY% %NAME% %CONTINUE%
+    ItemDisplay[FILTERLVL<2 DEF<300 ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %LIGHT_GRAY% %NAME% %CONTINUE%
+    ItemDisplay[FILTERLVL>1 DEF<200 !ETH]: %HIDE%
+    ItemDisplay[FILTERLVL>1 DEF<300 ETH]: %HIDE%
+// ---------------------------------------------------- WHITE ----------------------------------------------------------------------------------------------
+    ItemDisplay[FILTERLVL<3 (DEF>199 AND DEF<300) !ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)% %WHITE%%NAME% %CONTINUE%
+    ItemDisplay[FILTERLVL<3 (DEF>299 AND DEF<450) ETH]: %NOTIFY(ITEM,LOW)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %WHITE%%NAME% %CONTINUE%
+    ItemDisplay[FILTERLVL>2 (DEF>199 AND DEF<300) !ETH]: %HIDE%
+    ItemDisplay[FILTERLVL>2 (DEF>299 AND DEF<450) ETH]: %HIDE%
+// ---------------------------------------------------- BLUE -----------------------------------------------------------------------------------------------
+    ItemDisplay[FILTERLVL<4 (DEF>299 AND DEF<400) !ETH]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)% %BLUE%%NAME% %CONTINUE%
+    ItemDisplay[FILTERLVL<4 (DEF>449 AND DEF<600) ETH]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %BLUE%%NAME% %CONTINUE%
+    ItemDisplay[FILTERLVL>3 (DEF>299 AND DEF<400) !ETH]: %HIDE%
+    ItemDisplay[FILTERLVL>3 (DEF>449 AND DEF<600) ETH]: %HIDE%
+// ---------------------------------------------------- DGREEN ---------------------------------------------------------------------------------------------
+    ItemDisplay[FILTERLVL<5 (DEF>399 AND DEF<500) !ETH]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)% %DGREEN%%NAME% %CONTINUE%
+    ItemDisplay[FILTERLVL<5 (DEF>599 AND DEF<750) ETH]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %DGREEN%%NAME% %CONTINUE%
+    ItemDisplay[FILTERLVL>4 (DEF>399 AND DEF<500) !ETH]: %HIDE%
+    ItemDisplay[FILTERLVL>4 (DEF>599 AND DEF<750) ETH]: %HIDE%
+// ---------------------------------------------------- ORANGE ---------------------------------------------------------------------------------------------
+    ItemDisplay[FILTERLVL<6 (DEF>499 AND DEF<600) !ETH]: %NOTIFY(ITEM,HIGH)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)% %ORANGE%%NAME% %CONTINUE%
+    ItemDisplay[FILTERLVL<6 (DEF>749 AND DEF<900) ETH]: %NOTIFY(ITEM,HIGH)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %ORANGE%%NAME% %CONTINUE%
+    ItemDisplay[FILTERLVL>5 (DEF>499 AND DEF<600) !ETH]: %HIDE%
+    ItemDisplay[FILTERLVL>5 (DEF>749 AND DEF<900) ETH]: %HIDE%
+// ---------------------------------------------------- PURPLE ---------------------------------------------------------------------------------------------
+    ItemDisplay[DEF>599 !ETH]: %NOTIFY(ITEM,HIGH)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)% %PURPLE%%NAME% %CONTINUE%
+    ItemDisplay[DEF>899 ETH]: %NOTIFY(ITEM,HIGH)%%MAPICON(14,5)% %BORDER(155,8)%%BGCOLOR(0)% %GRAY%ETH: %PURPLE%%NAME% %CONTINUE%
+	
+    ItemDisplay[ED>0]: %NAME% %YELLOW%%EDEFENSE%ed%CONTINUE%
+	
+    ItemDisplay[SOCK=0 SUP]: %NAME% %ORANGE%[%DEF%]{%YELLOW%MAX-Socket %ORANGE%Larzuk Quest}
+    ItemDisplay[SOCK=0 !SUP]: %NAME% %ORANGE%[%DEF%]{%YELLOW%Roll Socket: %ORANGE%Ral-Thul-%BLUE%Sapphire%NL%%YELLOW%MAX-Socket %ORANGE%Larzuk Quest}
+    ItemDisplay[SOCK=1]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]
+    ItemDisplay[SOCK=2]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Smoke: %ORANGE%Nef-Lum %NL%%YELLOW%Stealth: %ORANGE%Tal-Eth %NL%%YELLOW%Prudence: %ORANGE%Mal-Tir}
+    ItemDisplay[SOCK=3]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Treachery: %ORANGE%Shael-Thul-Lem%NL%%YELLOW%Duress: %ORANGE%Shael-Um-Thul %NL%%YELLOW%Gloom: %ORANGE%Fal-Um-Pul %NL%%YELLOW%Bone: %ORANGE%Sol-Um-Um %NL%%YELLOW%Enigma: %ORANGE%Jah-Ith-Ber}
+    ItemDisplay[SOCK=4]: %NAME% %ORANGE%[%DEF%]%LIGHT_GRAY%[%SOCKETS%]{%YELLOW%Chains of Honor: %ORANGE%Dol-Um-Ber-Ist%NL%%YELLOW%Fortitude: %ORANGE%El-Sol-Dol-Lo%NL%%YELLOW%Bramble: %ORANGE%Ral-Ohm-Sur-Eth%NL%%YELLOW%Famine: %ORANGE%Fal-Ohm-Ort-Jah%NL%%YELLOW%Stone: %ORANGE%Shael-Um-Pul-Lum}
 
 EndIf[]
 
