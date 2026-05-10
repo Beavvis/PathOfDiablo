@@ -178,9 +178,9 @@ ItemDisplay[mbr]: %NOTIFY(ITEM,HIGH)% %BGCOLOR(155)% %BORDER(10,3)% %SPACE%%NL%%
 ItemStyle[T1MAP]: MapIcon = 19, BorderColor = 140, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 16, NotificationPriority = HIGH
 ItemStyle[T2MAP]: MapIcon = 20, BorderColor = 140, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 16, NotificationPriority = HIGH
 ItemStyle[T3MAP]: MapIcon = 18, BorderColor = 140, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 41, NotificationPriority = HIGH
-ItemStyle[COWMAP]: MapIcon = 18, BorderColor = 140, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 41, NotificationPriority = HIGH
+ItemStyle[COWMAP]: MapIcon = 17, BorderColor = 140, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 132, NotificationPriority = HIGH
 //
-ItemDisplay[MAP MAPTIER=1]: %BLUE%[T1]%WHITE%%CONTINUE%
+ItemDisplay[MAP MAPTIER=1]: %SPACE%%NL%%BLUE%[T1]%WHITE%%CONTINUE%
 ItemDisplay[MAP MAPTIER=2]: %SPACE%%NL%%YELLOW%[T2]%ORANGE%%CONTINUE%
 ItemDisplay[MAP MAPTIER=3]: %SPACE%%NL%%PURPLE%[T3]%RED%%CONTINUE%
 ItemDisplay[MAP MAPTIER=4]: %SPACE%%NL%%GREEN%[T4] %PURPLE%%CONTINUE%
@@ -196,9 +196,9 @@ ItemDisplay[ma8]: <<T3MAP>> %NAME% Musty Crypt %NL%%SPACE%%CONTINUE%				// Musty
 ItemDisplay[ma9]: <<T2MAP>> %NAME% Dim Cellar %NL%%SPACE%%CONTINUE%				// Dim Cellar
 ItemDisplay[ma10]: <<T2MAP>> %NAME% Icey Cavern %NL%%SPACE%%CONTINUE%				// Icey Cavern
 ItemDisplay[ma11]: <<COWMAP>> %NAME% Pleaseant Pasture %NL%%SPACE%%CONTINUE%			// Pleaseant Pasture
-ItemDisplay[ma12]: <<T1MAP>> %NAME% Baleful Alcazar %CONTINUE%					// Baleful Alcazar
-ItemDisplay[ma13]: <<T1MAP>> %NAME% Decomposing Settlement %CONTINUE%				// Decomposing Settlement
-ItemDisplay[ma14]: <<T1MAP>> %NAME% Abyssal Furnace %CONTINUE%					// Abyssal Furnace
+ItemDisplay[ma12]: <<T1MAP>> %NAME% Baleful Alcazar %NL%%SPACE%%CONTINUE%			// Baleful Alcazar
+ItemDisplay[ma13]: <<T1MAP>> %NAME% Decomposing Settlement %NL%%SPACE%%CONTINUE%		// Decomposing Settlement
+ItemDisplay[ma14]: <<T1MAP>> %NAME% Abyssal Furnace %NL%%SPACE%%CONTINUE%			// Abyssal Furnace
 // ---------------------------------------------- [NEW MAPS] ---------------------------------------------
 ItemDisplay[ma15]: <<T2MAP>>%YELLOW%[T2] %TEAL%Ravaged Town Relic%NL%%ITEMNAME% %CONTINUE%	// Ravaged Town Relic
 ItemDisplay[ma16]: <<T2MAP>>%YELLOW%[T2] %TEAL%Festering Tunnels Relic%NL%%ITEMNAME% %CONTINUE%	// Festering Tunnels Relic
