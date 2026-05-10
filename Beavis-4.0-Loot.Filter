@@ -172,38 +172,38 @@ ItemDisplay[mbr]: %NOTIFY(ITEM,HIGH)% %BGCOLOR(155)% %BORDER(10,3)% %SPACE%%NL%%
 // ItemDisplay[(ma1 OR ma3 OR maz)]: %NAME%
 // ItemDisplay[]: %NAME% %RED%[Report me %CODE% to Beavis]
 //
-ItemDisplay[ma1 !ID]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,8)% %YELLOW% **** %NAME%  ****				// Icey Cavern
-ItemDisplay[ma2 !ID]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,1)% %NL% %PURPLE% **** %RED% %NAME% %PURPLE% **** %NL% 	// Forgotten Desert
-ItemDisplay[ma3 !ID]: %NOTIFY(ITEM,HIGH)%%MAPICON(39)% %NL% %PURPLE% **** %NAME% %PURPLE% **** %NL% 		// Abandoned Precinct [Removed]
-ItemDisplay[ma4 !ID]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,8)% %PURPLE% **** %YELLOW% Desecrated Temple %PURPLE% **** // Desecrated Temple
-ItemDisplay[ma5 !ID]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,8)% %YELLOW% **** %RED% %NAME% %YELLOW% **** 		// Frigid Highlands
-ItemDisplay[ma6 !ID]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,1)% %NL% %PURPLE% **** %RED% %NAME% %PURPLE% **** %NL% 	// Ruined Citadel
-ItemDisplay[ma7 !ID]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,1)% %NL% %PURPLE% **** %NAME% %PURPLE% **** %NL%	 	// Burnt Forest
-ItemDisplay[ma8 !ID]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,8)% %YELLOW% **** %RED% %NAME% %YELLOW% **** 		// Musty Crypt
-ItemDisplay[ma9 !ID]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,8)% %PURPLE% **** %YELLOW% %NAME% %PURPLE% **** 		// Dim Cellar
-ItemDisplay[ma10 !ID]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,8)% %RED% **** %YELLOW% %NAME% %RED% ****			// Icey Cavern
-ItemDisplay[ma11 !ID]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,2)% %PURPLE% **** %WHITE% %NAME% %PURPLE% ****  		// Pleasant Pasture
-ItemDisplay[ma12 !ID]: %NOTIFY(ITEM,HIGH)%%MAPICON(19,25)% %WHITE% **** %WHITE% %NAME% %WHITE% ****		// Baleful Alcazar
-ItemDisplay[ma13 !ID]: %NOTIFY(ITEM,HIGH)%%MAPICON(19,25)% %RED% **** %WHITE% %NAME% %RED% ****			// Decomposing Settlement
-ItemDisplay[ma14 !ID]: %NOTIFY(ITEM,HIGH)%%MAPICON(19,25)% %RED% **** %WHITE% %NAME% %WHITE% ****		// Abyssal Furnace
-ItemDisplay[MAP !ID]: %NOTIFY(ITEM,HIGH)%%MAPICON(19,25)% %PURPLE% **** %WHITE% %NAME% %PURPLE% ****  		// CATCH-ALL-NEW-MAPs
 // -------------------------------------------------------------------------------------------------------------
-//					IDENTIFIED MAPS								|
+//						[MAPS]								|
 // -------------------------------------------------------------------------------------------------------------
-ItemDisplay[ma1]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,8)% %YELLOW% %NAME%  		// Icey Cavern
-ItemDisplay[ma2]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,1)% %PURPLE% %NAME% 		// Forgotten Desert
-ItemDisplay[ma3]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,8)% %PURPLE% %NAME% 		// Abandoned Precinct [Removed]
-ItemDisplay[ma4]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,8)% %YELLOW% %NAME% 		// Desecrated Temple
-ItemDisplay[ma5]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,8)% %RED% %NAME% 		// Frigid Highlands
-ItemDisplay[ma6]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,1)% %PURPLE% %NAME% 		// Ruined Citadel
-ItemDisplay[ma7]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,1)% %PURPLE% %NAME% 		// Burnt Forest
-ItemDisplay[ma8]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,8)% %RED% %NAME% 		// Musty Crypt
-ItemDisplay[ma9]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,8)% %YELLOW% %NAME% 		// Dim Cellar
-ItemDisplay[ma10]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,8)% %YELLOW% %NAME%		// Icey Cavern
-ItemDisplay[ma11]: %NOTIFY(ITEM,HIGH)%%MAPICON(40,2)% %WHITE% %NAME%  		// Pleaseant Pasture
-ItemDisplay[ma12]: %NOTIFY(ITEM,HIGH)%%MAPICON(19,25)% %WHITE% %NAME%		// Baleful Alcazar
-ItemDisplay[ma13]: %NOTIFY(ITEM,HIGH)%%MAPICON(19,25)% %WHITE% %NAME%		// Decomposing Settlement
-ItemDisplay[ma14]: %NOTIFY(ITEM,HIGH)%%MAPICON(19,25)% %WHITE% %NAME%		// Abyssal Furnace
+ItemDisplay[MAP MAPTIER=1]: %BLUE%[T1]%WHITE% %CONTINUE%
+ItemDisplay[MAP MAPTIER=2]: %YELLOW%[T2]%TEAL% %CONTINUE%
+ItemDisplay[MAP MAPTIER=3]: %RED%[T3]%TEAM% %CONTINUE%
+ItemDisplay[MAP MAPTIER=4]: %PURPLE%[T4] %GREEN% %CONTINUE%
+ItemDisplay[ma1]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)% %NAME% Icey Cavern					// Icey Cavern
+ItemDisplay[ma2]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,1)% %NAME% Forgotten Desert					// Forgotten Desert
+ItemDisplay[ma3]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)% %NAME% Abandoned Precinct				// Abandoned Precinct [Removed]
+ItemDisplay[ma4]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)% %NAME% Desecrated Temple					// Desecrated Temple
+ItemDisplay[ma5]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)% %NAME% Frigid Highlands					// Frigid Highlands
+ItemDisplay[ma6]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,1)% %NAME% Ruined Citadel					// Ruined Citadel
+ItemDisplay[ma7]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,1)% %NAME% Burnt Forest					// Burnt Forest
+ItemDisplay[ma8]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)% %NAME% Musty Crypt					// Musty Crypt
+ItemDisplay[ma9]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)% %NAME% Dim Cellar					// Dim Cellar
+ItemDisplay[ma10]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)% %NAME% Icey Cavern					// Icey Cavern
+ItemDisplay[ma11]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,2)% %NAME% Pleaseant Pasture				// Pleaseant Pasture
+ItemDisplay[ma12]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(19,25)% %NAME% Baleful Alcazar					// Baleful Alcazar
+ItemDisplay[ma13]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(19,25)% %NAME% Decomposing Settlement				// Decomposing Settlement
+ItemDisplay[ma14]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(19,25)% %NAME% Abyssal Furnace					// Abyssal Furnace
+// ---------------------------------------------- [NEW MAPS] ---------------------------------------------
+ItemDisplay[ma15]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)%%YELLOW%[T2] %TEAL%Ravaged Town Relic%NL%%ITEMNAME%	// Ravaged Town Relic
+ItemDisplay[ma16]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)%%YELLOW%[T2] %TEAL%Festering Tunnels Relic%NL%%ITEMNAME%	// Festering Tunnels Relic
+ItemDisplay[ma17]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)%%YELLOW%[T2] %TEAL%Agony Halls Relic%NL%%ITEMNAME%	// Agony Halls Relic
+ItemDisplay[ma18]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)%%YELLOW%[T2] %TEAL%Overgrown Ruin Relic%NL%%ITEMNAME%	// Overgrown Ruin Relic
+ItemDisplay[ma19]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)%%YELLOW%[T2] %TEAL%Nothern Wall Relic%NL%%ITEMNAME% 	// Nothern Wall Relic
+ItemDisplay[ma20]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)%%YELLOW%[T2] %TEAL%Grim Barrack Relic%NL%%ITEMNAME%	// Grim Barrack Relic
+ItemDisplay[ma21]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)%%YELLOW%[T2] %TEAL%Whispering Cave Relic%NL%%ITEMNAME%	// Whispering Cave Relic
+ItemDisplay[ma22]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)%%YELLOW%[T2] %TEAL%Hellfire Throne Relic%NL%%ITEMNAME% 	// Hellfire Throne Relic
+ItemDisplay[ma23]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)%%YELLOW%[T2] %TEAL%Underground Lake Relic%NL%%ITEMNAME% 	// Underground Lake Relic
+//
 // ----------------------
 // CATCH ALL MAPS HERE	|
 //-----------------------
