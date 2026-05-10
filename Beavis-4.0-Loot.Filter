@@ -175,34 +175,45 @@ ItemDisplay[mbr]: %NOTIFY(ITEM,HIGH)% %BGCOLOR(155)% %BORDER(10,3)% %SPACE%%NL%%
 // -------------------------------------------------------------------------------------------------------------
 //						[MAPS]								|
 // -------------------------------------------------------------------------------------------------------------
-ItemDisplay[MAP MAPTIER=1]: %BLUE%[T1]%WHITE% %CONTINUE%
-ItemDisplay[MAP MAPTIER=2]: %YELLOW%[T2]%TEAL% %CONTINUE%
-ItemDisplay[MAP MAPTIER=3]: %RED%[T3]%TEAL% %CONTINUE%
-ItemDisplay[MAP MAPTIER=4]: %PURPLE%[T4] %GREEN% %CONTINUE%
-ItemDisplay[ma1]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)% %NAME% Icey Cavern					// Icey Cavern
-ItemDisplay[ma2]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,1)% %NAME% Forgotten Desert					// Forgotten Desert
-ItemDisplay[ma3]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)% %NAME% Abandoned Precinct				// Abandoned Precinct [Removed]
-ItemDisplay[ma4]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)% %NAME% Desecrated Temple					// Desecrated Temple
-ItemDisplay[ma5]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)% %NAME% Frigid Highlands					// Frigid Highlands
-ItemDisplay[ma6]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,1)% %NAME% Ruined Citadel					// Ruined Citadel
-ItemDisplay[ma7]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,1)% %NAME% Burnt Forest					// Burnt Forest
-ItemDisplay[ma8]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)% %NAME% Musty Crypt					// Musty Crypt
-ItemDisplay[ma9]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)% %NAME% Dim Cellar					// Dim Cellar
-ItemDisplay[ma10]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)% %NAME% Icey Cavern					// Icey Cavern
-ItemDisplay[ma11]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,2)% %NAME% Pleaseant Pasture				// Pleaseant Pasture
-ItemDisplay[ma12]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(19,25)% %NAME% Baleful Alcazar					// Baleful Alcazar
-ItemDisplay[ma13]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(19,25)% %NAME% Decomposing Settlement				// Decomposing Settlement
-ItemDisplay[ma14]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(19,25)% %NAME% Abyssal Furnace					// Abyssal Furnace
+ItemStyle[T1MAP]: MapIcon = 19, BorderColor = 140, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 16, NotificationPriority = HIGH
+ItemStyle[T2MAP]: MapIcon = 20, BorderColor = 140, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 16, NotificationPriority = HIGH
+ItemStyle[T3MAP]: MapIcon = 18, BorderColor = 140, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 41, NotificationPriority = HIGH
+ItemStyle[COWMAP]: MapIcon = 18, BorderColor = 140, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 41, NotificationPriority = HIGH
+//
+ItemDisplay[MAP MAPTIER=1]: %BLUE%[T1]%WHITE%%CONTINUE%
+ItemDisplay[MAP MAPTIER=2]: %SPACE%%NL%%YELLOW%[T2]%ORANGE%%CONTINUE%
+ItemDisplay[MAP MAPTIER=3]: %SPACE%%NL%%PURPLE%[T3]%RED%%CONTINUE%
+ItemDisplay[MAP MAPTIER=4]: %SPACE%%NL%%GREEN%[T4] %PURPLE%%CONTINUE%
+//
+ItemDisplay[ma1]: <<T2MAP>> %NAME% Icey Cavern %NL%%SPACE%%CONTINUE%				// Icey Cavern
+ItemDisplay[ma2]: <<T3MAP>> %NAME% Forgotten Desert %NL%%SPACE%%CONTINUE%			// Forgotten Desert
+ItemDisplay[ma3]: <<T2MAP>> %NAME% Abandoned Precinct %NL%%SPACE%%CONTINUE%			// Abandoned Precinct [Removed]
+ItemDisplay[ma4]: <<T2MAP>> %NAME% Desecrated Temple %NL%%SPACE%%CONTINUE%			// Desecrated Temple
+ItemDisplay[ma5]: <<T3MAP>> %NAME% Frigid Highlands %NL%%SPACE%%CONTINUE%			// Frigid Highlands
+ItemDisplay[ma6]: <<T3MAP>> %NAME% Ruined Citadel %NL%%SPACE%%CONTINUE%				// Ruined Citadel
+ItemDisplay[ma7]: <<T3MAP>> %NAME% Burnt Forest %NL%%SPACE% %CONTINUE%				// Burnt Forest
+ItemDisplay[ma8]: <<T3MAP>> %NAME% Musty Crypt %NL%%SPACE%%CONTINUE%				// Musty Crypt
+ItemDisplay[ma9]: <<T2MAP>> %NAME% Dim Cellar %NL%%SPACE%%CONTINUE%				// Dim Cellar
+ItemDisplay[ma10]: <<T2MAP>> %NAME% Icey Cavern %NL%%SPACE%%CONTINUE%				// Icey Cavern
+ItemDisplay[ma11]: <<COWMAP>> %NAME% Pleaseant Pasture %NL%%SPACE%%CONTINUE%			// Pleaseant Pasture
+ItemDisplay[ma12]: <<T1MAP>> %NAME% Baleful Alcazar %CONTINUE%					// Baleful Alcazar
+ItemDisplay[ma13]: <<T1MAP>> %NAME% Decomposing Settlement %CONTINUE%				// Decomposing Settlement
+ItemDisplay[ma14]: <<T1MAP>> %NAME% Abyssal Furnace %CONTINUE%					// Abyssal Furnace
 // ---------------------------------------------- [NEW MAPS] ---------------------------------------------
-ItemDisplay[ma15]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)%%YELLOW%[T2] %TEAL%Ravaged Town Relic%NL%%ITEMNAME%	// Ravaged Town Relic
-ItemDisplay[ma16]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)%%YELLOW%[T2] %TEAL%Festering Tunnels Relic%NL%%ITEMNAME%	// Festering Tunnels Relic
-ItemDisplay[ma17]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)%%YELLOW%[T2] %TEAL%Agony Halls Relic%NL%%ITEMNAME%	// Agony Halls Relic
-ItemDisplay[ma18]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)%%YELLOW%[T2] %TEAL%Overgrown Ruin Relic%NL%%ITEMNAME%	// Overgrown Ruin Relic
-ItemDisplay[ma19]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)%%YELLOW%[T2] %TEAL%Nothern Wall Relic%NL%%ITEMNAME% 	// Nothern Wall Relic
-ItemDisplay[ma20]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)%%YELLOW%[T2] %TEAL%Grim Barrack Relic%NL%%ITEMNAME%	// Grim Barrack Relic
-ItemDisplay[ma21]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)%%YELLOW%[T2] %TEAL%Whispering Cave Relic%NL%%ITEMNAME%	// Whispering Cave Relic
-ItemDisplay[ma22]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)%%YELLOW%[T2] %TEAL%Hellfire Throne Relic%NL%%ITEMNAME% 	// Hellfire Throne Relic
-ItemDisplay[ma23]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)%%YELLOW%[T2] %TEAL%Underground Lake Relic%NL%%ITEMNAME% 	// Underground Lake Relic
+ItemDisplay[ma15]: <<T2MAP>>%YELLOW%[T2] %TEAL%Ravaged Town Relic%NL%%ITEMNAME% %CONTINUE%	// Ravaged Town Relic
+ItemDisplay[ma16]: <<T2MAP>>%YELLOW%[T2] %TEAL%Festering Tunnels Relic%NL%%ITEMNAME% %CONTINUE%	// Festering Tunnels Relic
+ItemDisplay[ma17]: <<T2MAP>>%YELLOW%[T2] %TEAL%Agony Halls Relic%NL%%ITEMNAME% %CONTINUE%	// Agony Halls Relic
+ItemDisplay[ma18]: <<T2MAP>>%YELLOW%[T2] %TEAL%Overgrown Ruin Relic%NL%%ITEMNAME% %CONTINUE%	// Overgrown Ruin Relic
+ItemDisplay[ma19]: <<T2MAP>>%YELLOW%[T2] %TEAL%Nothern Wall Relic%NL%%ITEMNAME% %CONTINUE%	// Nothern Wall Relic
+ItemDisplay[ma20]: <<T2MAP>>%YELLOW%[T2] %TEAL%Grim Barrack Relic%NL%%ITEMNAME% %CONTINUE%	// Grim Barrack Relic
+ItemDisplay[ma21]: <<T2MAP>>%YELLOW%[T2] %TEAL%Whispering Cave Relic%NL%%ITEMNAME% %CONTINUE%	// Whispering Cave Relic
+ItemDisplay[ma22]: <<T2MAP>>%YELLOW%[T2] %TEAL%Hellfire Throne Relic%NL%%ITEMNAME% %CONTINUE%	// Hellfire Throne Relic
+ItemDisplay[ma23]: <<T2MAP>>%YELLOW%[T2] %TEAL%Underground Lake Relic%NL%%ITEMNAME% %CONTINUE%	// Underground Lake Relic
+
+EnableIf[NOTIFYLVL<3]
+	ItemDisplay[MAP]: %NAME%%NOTIFYSOUND(2664,HIGH)%
+EndIf[]
+ItemDisplay[MAP]: %NAME%
 //
 // ----------------------
 // CATCH ALL MAPS HERE	|
