@@ -177,7 +177,7 @@ ItemDisplay[mbr]: %NOTIFY(ITEM,HIGH)% %BGCOLOR(155)% %BORDER(10,3)% %SPACE%%NL%%
 // -------------------------------------------------------------------------------------------------------------
 ItemDisplay[MAP MAPTIER=1]: %BLUE%[T1]%WHITE% %CONTINUE%
 ItemDisplay[MAP MAPTIER=2]: %YELLOW%[T2]%TEAL% %CONTINUE%
-ItemDisplay[MAP MAPTIER=3]: %RED%[T3]%TEAM% %CONTINUE%
+ItemDisplay[MAP MAPTIER=3]: %RED%[T3]%TEAL% %CONTINUE%
 ItemDisplay[MAP MAPTIER=4]: %PURPLE%[T4] %GREEN% %CONTINUE%
 ItemDisplay[ma1]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,8)% %NAME% Icey Cavern					// Icey Cavern
 ItemDisplay[ma2]: %NOTIFY(ITEM,MEDIUM)%%MAPICON(40,1)% %NAME% Forgotten Desert					// Forgotten Desert
